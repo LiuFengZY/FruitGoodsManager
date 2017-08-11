@@ -17,4 +17,11 @@ public class SQLCommonUtils {
 	public static String makeRegisterUserSql(String username, String pwd) {
 		return "";
 	}
+	
+	public static String makeGetAllFruitGoodsSql(boolean ifmainfruit) {
+		if (ifmainfruit) 
+			return "select * from fggoods where mainfruit = 1";
+		else 
+			return "select * from fggoods";
+	}
 }

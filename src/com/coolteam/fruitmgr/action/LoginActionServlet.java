@@ -3,6 +3,7 @@ package com.coolteam.fruitmgr.action;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,6 +55,11 @@ public class LoginActionServlet extends HttpServlet {
 			if (ifLoginSuccess) {
 				System.out.println("User:" + username + ", Login success.");
 				pw.println(true);
+				//保存一个session.
+				request.getSession().setAttribute("USER", oneUser);
+				//返回一个登陆成功提示的界面。
+				RequestDispatcher dispatcher=request.getRequestDispatcher("/WEB-INF/LoginResult.jsp");
+				dispatcher.forward(request, response);
 			} else {
 				System.out.println("User:" + username + ", Login failed, need register.");
 				pw.println(false);

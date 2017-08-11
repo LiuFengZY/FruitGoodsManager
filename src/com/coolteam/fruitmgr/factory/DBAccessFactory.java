@@ -14,5 +14,9 @@ public class DBAccessFactory {
 	public static UserDAO getUserDAOInstance() {
 		return new HandleUserDaoImpl();
 	}
+	
+	public static FruitGoodsDAO getFruitGoodDAOInstance() {
+		return new HandleGetFruitDaoImpl();
+	}
 
 }

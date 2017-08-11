@@ -8,4 +8,9 @@
     <servlet-name>LoginActionServlet</servlet-name>
     <servlet-class>com.coolteam.fruitmgr.action。LoginActionServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>QueryAllFruitServlet</servlet-name>
+    <servlet-class>com.coolteam.fruitmgr.action。QueryAllFruitServlet</servlet-class>
+  </servlet>
+  
 </web-app>
